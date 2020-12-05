@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Javascript file here-->
+    <script src="navbar.js"></script>
+    <!--fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--NavBar-->
+    <div class="navBar">
+        <nav>
+            <div class="logo">
+                <h1>Electri<span>city</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa fa-power-off" aria-hidden="true"></i>
+            </div>
+            <div onclick="NavActive()" class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--main-->
+    <div class="maindiv">
+        <div class="centerdiv">
+            <input type="text" name="" id="new" placeholder="New Bill">
+            <input type="text" name="" id="old" placeholder="Old Bill">
+            <input type="text" name="" id="unit" placeholder="(RS) charge">
+            <input type="text" name="" id="minus" value="0">
+            <button type="submit" onclick="calculate()">calculate</button>
+        </div>
+        <div class="centerdiv">
+            <h1>Your E-Bill Is:</h1>
+            <div class="calculate">
+                <span id="new_bill"></span>
+                <span>-<span id="old_bill"></span></span>
+                <span>---------------------</span>
+                <span id="result" style="color: rgb(17, 138, 105);"></span>
+                <span>---------------------</span><br>
+                <span id="result_two"></span>
+                <span>x <span id="unit_bill"></span></span>
+                <span>---------------------</span>
+                <span id="reading" style="color: rgb(17, 138, 105);"></span>
+                <span>---------------------</span><br>
+                <span id="reading_two"></span>
+                <span>- <span id="minus_bill"></span></span>
+                <span>---------------------</span>
+                <span id="final_bill" style="color: rgb(17, 138, 105);"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

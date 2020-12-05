@@ -1,0 +1,233 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  min-height: 8vh;
+  /* background-color: rgb(56, 56, 56); */
+  align-items: center;
+  font-family: "Kufam", cursive;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* color: rgb(214, 211, 211); */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.logo h1 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: black;
+}
+.logo h1 span {
+  color: red;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: sans-serif;
+  padding: 15px 15px;
+  border-radius: 5px;
+}
+.nav-links li a {
+  transition: 0.5s;
+}
+.nav-links a:hover {
+  background-color: red;
+  color: white;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8%;
+}
+.icons i
+{
+  font-size: 25px;
+}
+.icons i:hover
+{
+  color: red;
+}
+.burger /* for hide the 3 lines when screen are full */ {
+  display: none;
+}
+.burger div /* 3 lines of button code here */ {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px;
+}
+
+/*===========================================================================*/
+/*main coding*/
+.maindiv
+{
+    width: 100%;
+    height:92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.maindiv .centerdiv
+{
+    position: relative;
+    background: white;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.maindiv .centerdiv input
+{
+  width: 80%;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.maindiv .centerdiv input[type=text]
+{
+  border-bottom: 2px solid black;
+  
+  color: red;
+  font-size: 3vh;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+::placeholder
+{
+  color: red;
+  font-size: 3vh;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.maindiv .centerdiv:last-child
+{
+  background: rgb(2, 2, 2);
+}
+.centerdiv h1
+{
+  color: white;
+  font-family: sans-serif;
+
+}
+.centerdiv .calculate
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.centerdiv span
+{
+  color: green;
+  font-size: 25px;
+  font-family: monospace;
+}
+button
+{
+  border: none;
+  background: red;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  outline: none;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+button:hover
+{
+  color: red;
+  background: white;
+}
+/* mobile coding start */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .icons
+  {
+      width: 20%;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade /* Animating the nav-active */ {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .maindiv
+  {
+    flex-direction: column;
+  }
+  .maindiv .centerdiv
+  {
+    width: 100%;
+  }
+}
